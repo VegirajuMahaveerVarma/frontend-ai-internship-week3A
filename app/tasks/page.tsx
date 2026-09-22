@@ -1,0 +1,1 @@
+import Placeholder from "@/components/Placeholder"; export default function Page(){return <Placeholder eyebrow="Screen 02" title="Tasks" description="Placeholder for task creation, filtering, status, and detail workflows. Keep this page server-rendered until interactivity is introduced."/>}
