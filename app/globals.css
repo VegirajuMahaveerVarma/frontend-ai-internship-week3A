@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-500: #7c5cff;
+  --color-brand-600: #6847e8;
+  --color-ink: #171a24;
+  --color-muted: #697083;
+  --color-line: #e7eaf1;
+}
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f6f7fb; color: var(--color-ink); }
+* { box-sizing: border-box; }
