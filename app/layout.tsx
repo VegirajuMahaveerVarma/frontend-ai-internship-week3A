@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "FocusFlow — Week 3 Capstone",
+  description: "Frontend AI Engineering capstone skeleton.",
+};
+
+const links = [
+  ["/", "Overview"],
+  ["/dashboard", "Dashboard"],
+  ["/tasks", "Tasks"],
+  ["/calendar", "Calendar"],
+  ["/insights", "Insights"],
+  ["/health-check", "Health"],
+];
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body>
+        <div className="min-h-screen bg-slate-50">
+          <header className="sticky top-0 z-20 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+              <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight">
+                <span className="grid size-9 place-items-center rounded-xl bg-brand-500 text-white shadow-lg shadow-brand-500/20">✦</span>
+                FocusFlow
+              </Link>
+              <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+                {links.map(([href, label]) => (
+                  <Link key={href} href={href} className="rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-brand-50 hover:text-brand-600">
+                    {label}
+                  </Link>
+                ))}
+              </nav>
+              <Link href="/health-check" className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:border-brand-200 hover:text-brand-600">
+                System status
+              </Link>
+            </div>
+            <nav className="flex gap-1 overflow-x-auto border-t border-slate-100 px-4 py-2 md:hidden" aria-label="Mobile navigation">
+              {links.map(([href, label]) => (
+                <Link key={href} href={href} className="whitespace-nowrap rounded-lg px-3 py-1.5 text-xs text-slate-600 hover:bg-brand-50 hover:text-brand-600">{label}</Link>
+              ))}
+            </nav>
+          </header>
+          <main>{children}</main>
+        </div>
+      </body>
+    </html>
+  );
+}
