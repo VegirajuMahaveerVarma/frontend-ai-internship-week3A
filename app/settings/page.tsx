@@ -1,0 +1,1 @@
+import Placeholder from "@/components/Placeholder"; export default function Page(){return <Placeholder eyebrow="Screen 05" title="Settings" description="Placeholder for preferences, profile configuration, and environment-aware application settings."/>}
