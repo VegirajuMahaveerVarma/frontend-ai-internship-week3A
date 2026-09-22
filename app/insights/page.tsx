@@ -1,0 +1,1 @@
+import Placeholder from "@/components/Placeholder"; export default function Page(){return <Placeholder eyebrow="Screen 04" title="Insights" description="Placeholder for analytics, progress, and AI-assisted recommendations from the capstone specification."/>}
