@@ -1,0 +1,1 @@
+import Placeholder from "@/components/Placeholder"; export default function Page(){return <Placeholder eyebrow="Screen 03" title="Calendar" description="Placeholder for calendar and scheduling views. The responsive page shell works at mobile and desktop widths."/>}
