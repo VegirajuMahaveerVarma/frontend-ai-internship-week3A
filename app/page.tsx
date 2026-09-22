@@ -1,23 +1,2 @@
 import Link from "next/link";
-
-export default function HomePage() {
-  return (
-    <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-      <section className="grid items-center gap-12 lg:grid-cols-[1.2fr_.8fr]">
-        <div>
-          <span className="rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-600">Week 3 · Capstone skeleton</span>
-          <h1 className="mt-6 max-w-3xl text-5xl font-black tracking-[-0.05em] text-slate-950 sm:text-6xl">Build the foundation. Ship early.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">A production-shaped Next.js application with routed screens, shared layout, Tailwind design tokens, and a live data health check.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/dashboard" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/10 hover:bg-slate-800">Open dashboard →</Link>
-            <Link href="/health-check" className="rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:border-brand-300">Run health check</Link>
-          </div>
-        </div>
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5">
-          <div className="mb-5 flex items-center justify-between"><span className="text-sm font-bold">Foundation status</span><span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Ready</span></div>
-          <div className="space-y-3">{["App Router structure","Shared navigation","Tailwind tokens","Health-check route","Responsive screens"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl bg-slate-50 p-3 text-sm text-slate-700"><span className="grid size-6 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>{item}</div>)}</div>
-        </div>
-      </section>
-    </div>
-  );
-}
+export default function HomePage(){return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24"><section className="grid items-center gap-12 lg:grid-cols-[1.2fr_.8fr]"><div><span className="rounded-full bg-brand-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-600">Week 3 · Capstone skeleton</span><h1 className="mt-6 max-w-3xl text-5xl font-black tracking-[-0.05em] text-slate-950 sm:text-6xl">Build the foundation. Ship early.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">A production-shaped Next.js application with routed screens, shared layout, Tailwind design tokens, and a live data health check.</p><div className="mt-8 flex flex-wrap gap-3"><Link href="/dashboard" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/10 hover:bg-slate-800">Open dashboard →</Link><Link href="/health-check" className="rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 hover:border-brand-300">Run health check</Link></div></div><div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5"><div className="mb-5 flex items-center justify-between"><span className="text-sm font-bold">Foundation status</span><span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Ready</span></div><div className="space-y-3">{["App Router structure","Shared navigation","Tailwind tokens","Health-check route","Responsive screens"].map(item=><div key={item} className="flex items-center gap-3 rounded-xl bg-slate-50 p-3 text-sm text-slate-700"><span className="grid size-6 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>{item}</div>)}</div></div></section></div>}
