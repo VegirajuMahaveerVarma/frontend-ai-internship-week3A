@@ -1,0 +1,1 @@
+import { NextResponse } from "next"; export async function GET(){return NextResponse.json({status:"ok",service:"focusflow-capstone",environment:process.env.NODE_ENV,timestamp:new Date().toISOString()});}
