@@ -1,64 +1,38 @@
-# FocusFlow — Frontend AI Internship Week 3A
+# Frontend AI Internship — Week 3A / FE-04
 
-A polished React dashboard built independently with AI used as a development assistant.
+## Capstone skeleton, deployed
 
-## What this project demonstrates
+This iteration moves the project to Next.js App Router and establishes the Week 3 production foundation: routed placeholder screens, a shared root layout, Tailwind CSS design tokens, environment-variable structure, and a server-rendered health check.
 
-- React component-based architecture
-- Responsive dashboard layout
-- Reusable task and metric components
-- Search and filtering
-- Add-task modal with keyboard interaction
-- Task completion state
-- Responsive mobile navigation
-- Lightweight data visualization
-- Accessible labels and interaction states
-- Vite-based development workflow
+### Routes
 
-## Tech stack
+- / — capstone overview
+- /dashboard — dashboard placeholder
+- /tasks — tasks placeholder
+- /calendar — calendar placeholder
+- /insights — insights placeholder
+- /settings — settings placeholder
+- /health-check — fetched-data health check
+- /api/health — JSON health endpoint
 
-- React
-- Vite
-- JavaScript (ES modules)
-- CSS
-- Lucide React icons
+### Run locally
 
-## Run locally
-
-```bash
 npm install
 npm run dev
-```
-
-Production build:
-
-```bash
 npm run build
-```
 
-## AI-assisted development workflow
+### Deployment
 
-AI was used as a development assistant for:
+The repository is configured for Vercel/Next.js. Git-connected deployments can generate a preview for each push or pull request once the repository is connected to the Vercel project.
 
-1. Breaking the interface into reusable React components.
-2. Planning state management for task completion, search, and task creation.
-3. Reviewing responsive CSS patterns.
-4. Debugging interaction logic and edge cases.
-5. Improving accessibility labels and UI states.
-6. Reviewing the final project structure and README.
+### Environment variables
 
-The implementation was then adapted, tested, and organized as a self-contained React project.
+.env.example documents the structure. Real secrets belong in Vercel Environment Variables and must never be committed. .env files are ignored by Git.
 
-## Project structure
+### Architecture
 
-```
-src/
-  main.jsx
-  styles.css
-```
+The App Router uses Server Components by default. No Client Components are needed for this skeleton because navigation and placeholder screens are server-rendered. Interactive components can be introduced later with an explicit client boundary.
 
-The app is intentionally kept lightweight so the behavior and frontend decisions remain easy to inspect.
+### Responsive acceptance targets
 
-## Assignment
-
-FlyRank — Frontend AI Engineering internship, Week 3A.
+The shared shell and pages use responsive Tailwind utilities and are designed for the assignment's 375px mobile and 1280px desktop targets.
